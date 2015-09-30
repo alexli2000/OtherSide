@@ -78,7 +78,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
     
     func moveMapToCoordinates(coordinates:CLLocationCoordinate2D) {
-        mapView.setRegion(MKCoordinateRegionMakeWithDistance(coordinates, CLLocationDistance(100000), CLLocationDistance(100000)), animated: true)
+        mapView.setRegion(MKCoordinateRegionMakeWithDistance(coordinates, CLLocationDistance(1000000), CLLocationDistance(1000000)), animated: true)
     }
     
     func createAnnotationForCoordinates(coordinates:CLLocationCoordinate2D, subtitle:String) {
