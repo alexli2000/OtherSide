@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAA479C81BA86DA700D01086 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA479C71BA86DA700D01086 /* DetailView.swift */; settings = {ASSET_TAGS = (); }; };
 		FAE5D81A1BA64B6600E6A538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5D8191BA64B6600E6A538 /* AppDelegate.swift */; };
 		FAE5D81C1BA64B6600E6A538 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5D81B1BA64B6600E6A538 /* ViewController.swift */; };
 		FAE5D81F1BA64B6600E6A538 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE5D81D1BA64B6600E6A538 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		FAE5D8241BA64B6600E6A538 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE5D8221BA64B6600E6A538 /* LaunchScreen.storyboard */; };
 		FAE5D82F1BA64B6600E6A538 /* OtherSideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5D82E1BA64B6600E6A538 /* OtherSideTests.swift */; };
 		FAE5D83A1BA64B6600E6A538 /* OtherSideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5D8391BA64B6600E6A538 /* OtherSideUITests.swift */; };
+		FAE5D8481BA64B7600E6A538 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE5D8471BA64B7600E6A538 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FAA479C71BA86DA700D01086 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FAE5D8161BA64B6600E6A538 /* OtherSide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtherSide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE5D8191BA64B6600E6A538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE5D81B1BA64B6600E6A538 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		FAE5D8351BA64B6600E6A538 /* OtherSideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtherSideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE5D8391BA64B6600E6A538 /* OtherSideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSideUITests.swift; sourceTree = "<group>"; };
 		FAE5D83B1BA64B6600E6A538 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE5D8471BA64B7600E6A538 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE5D8481BA64B7600E6A538 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +104,12 @@
 			children = (
 				FAE5D8191BA64B6600E6A538 /* AppDelegate.swift */,
 				FAE5D81B1BA64B6600E6A538 /* ViewController.swift */,
+				FAA479C71BA86DA700D01086 /* DetailView.swift */,
 				FAE5D81D1BA64B6600E6A538 /* Main.storyboard */,
 				FAE5D8201BA64B6600E6A538 /* Assets.xcassets */,
 				FAE5D8221BA64B6600E6A538 /* LaunchScreen.storyboard */,
 				FAE5D8251BA64B6600E6A538 /* Info.plist */,
+				FAE5D8471BA64B7600E6A538 /* MapKit.framework */,
 			);
 			path = OtherSide;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA479C81BA86DA700D01086 /* DetailView.swift in Sources */,
 				FAE5D81C1BA64B6600E6A538 /* ViewController.swift in Sources */,
 				FAE5D81A1BA64B6600E6A538 /* AppDelegate.swift in Sources */,
 			);
@@ -399,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OtherSide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexli.OtherSide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OtherSide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexli.OtherSide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,6 +493,7 @@
 				FAE5D8401BA64B6600E6A538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAE5D8411BA64B6600E6A538 /* Build configuration list for PBXNativeTarget "OtherSideTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +502,7 @@
 				FAE5D8431BA64B6600E6A538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAE5D8441BA64B6600E6A538 /* Build configuration list for PBXNativeTarget "OtherSideUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +511,7 @@
 				FAE5D8461BA64B6600E6A538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

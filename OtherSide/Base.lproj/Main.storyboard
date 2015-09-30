@@ -1,25 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OtherSide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ab6-bG-F9a">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="U1j-3E-pa0"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX0-nb-mps">
+                                <rect key="frame" x="258" y="502" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="fdZ-1a-Vum"/>
+                                    <constraint firstAttribute="width" secondItem="nX0-nb-mps" secondAttribute="height" multiplier="1:1" id="jo8-1Y-6NL"/>
+                                </constraints>
+                                <state key="normal" image="Waxing Gibbous-100"/>
+                                <connections>
+                                    <action selector="otherSideButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFs-zk-Lzx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itP-A1-Q7R">
+                                <rect key="frame" x="16" y="502" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="itP-A1-Q7R" secondAttribute="height" multiplier="1:1" id="N4R-Uk-eXk"/>
+                                    <constraint firstAttribute="width" constant="46" id="dMz-aV-zDd"/>
+                                </constraints>
+                                <state key="normal" image="Center Direction-100"/>
+                                <connections>
+                                    <action selector="currentLocationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WX9-hG-EN3"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gtJ-Is-COG">
+                                <rect key="frame" x="136" y="509" width="51" height="31"/>
+                                <color key="onTintColor" red="0.87142783720000005" green="0.30563836350000001" blue="0.23984888979999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Through Core?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TE-cF-Z4N">
+                                <rect key="frame" x="113.5" y="483" width="94" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ab6-bG-F9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="14I-fQ-AMg"/>
+                            <constraint firstItem="gtJ-Is-COG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2zi-hF-kkZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ab6-bG-F9a" secondAttribute="trailing" constant="-20" id="868-2a-DlE"/>
+                            <constraint firstItem="gtJ-Is-COG" firstAttribute="top" secondItem="2TE-cF-Z4N" secondAttribute="bottom" constant="8" id="8XE-NR-5Nj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nX0-nb-mps" secondAttribute="bottom" constant="20" id="KCc-gG-Rtw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="itP-A1-Q7R" secondAttribute="leading" id="ZSr-y4-ikS"/>
+                            <constraint firstItem="Ab6-bG-F9a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="bnE-sx-vWK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="itP-A1-Q7R" secondAttribute="bottom" constant="20" id="ezt-7f-yNb"/>
+                            <constraint firstItem="2TE-cF-Z4N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fbH-sa-BJB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nX0-nb-mps" secondAttribute="trailing" id="pGI-Js-kCN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gtJ-Is-COG" secondAttribute="bottom" constant="28" id="qbt-Jc-A0Q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ab6-bG-F9a" secondAttribute="bottom" id="v2L-Un-MCL"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="currentLocationButton" destination="itP-A1-Q7R" id="khr-IM-Oc7"/>
+                        <outlet property="mapView" destination="Ab6-bG-F9a" id="9JY-h5-mJC"/>
+                        <outlet property="otherSideButton" destination="nX0-nb-mps" id="PC0-yB-4cn"/>
+                        <outlet property="throughCoreSwitch" destination="gtJ-Is-COG" id="XCx-66-cwv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="275" y="387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Center Direction-100" width="33" height="33"/>
+        <image name="Waxing Gibbous-100" width="33" height="33"/>
+    </resources>
 </document>
